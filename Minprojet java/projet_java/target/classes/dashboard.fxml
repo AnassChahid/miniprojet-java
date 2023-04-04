@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="main_form" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #143d59;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projet_java.dashboardcontroll">
+   <children>
+      <Button fx:id="mini_dash" layoutX="536.0" layoutY="-1.0" mnemonicParsing="false" onAction="#minimize" prefHeight="20.0" prefWidth="45.0" style="-fx-background-color: #f4b41a;" text="_" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="close_dash" layoutX="575.0" layoutY="-1.0" mnemonicParsing="false" onAction="#close" prefHeight="28.0" prefWidth="45.0" style="-fx-background-color: #f4b41a;" text="x" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutY="2.0" prefHeight="422.0" prefWidth="183.0" style="-fx-background-color: #f4b41a;">
+         <children>
+            <Text fill="WHITE" layoutX="16.0" layoutY="47.0" stroke="#143d59" strokeType="OUTSIDE" strokeWidth="0.5" text="Welcome   back !" wrappingWidth="161.0">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="36.0" />
+               </font>
+            </Text>
+            <Button fx:id="livreur" layoutX="12.0" layoutY="137.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="36.0" prefWidth="169.0" style="-fx-background-color: #f4b41a;" text="Livreur" textFill="#143d59">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="produit" layoutX="11.0" layoutY="189.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #f4b41a;" text="Produit" textFill="#143d59">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="commande" layoutX="7.0" layoutY="238.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="31.0" prefWidth="169.0" style="-fx-background-color: #f4b41a;" text="commande" textFill="#143d59">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Button>
+            <Text fill="#143d59" layoutX="40.0" layoutY="381.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made By AC">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="log_out" layoutX="61.0" layoutY="302.0" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: #f4b41a; -fx-border-color: #143d59; -fx-border-radius: 15px;" text="Log Out" textFill="#143d59">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <Line endX="100.0" layoutX="81.0" layoutY="182.0" startX="-71.5" />
+            <Line endX="68.5" layoutX="108.0" layoutY="231.0" startX="-100.0" />
+            <Line endX="67.5" layoutX="108.0" layoutY="286.0" startX="-100.0" />
+            <Line endX="77.0" layoutX="105.0" layoutY="129.0" startX="-94.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="tab_livr" layoutX="186.0" layoutY="29.0" prefHeight="373.0" prefWidth="414.0" visible="false">
+         <children>
+            <TableView fx:id="table_veiw_liv" layoutX="3.0" layoutY="187.0" prefHeight="200.0" prefWidth="420.0">
+              <columns>
+                <TableColumn fx:id="id_livreur" prefWidth="91.0" text="id_livreur" />
+                <TableColumn fx:id="nom_liv" prefWidth="93.0" text="Nom" />
+                  <TableColumn fx:id="prenom_liv" prefWidth="116.0" text="Prenom" />
+                  <TableColumn fx:id="tele_liv" prefWidth="124.0" text="Tele" />
+              </columns>
+            </TableView>
+            <Button fx:id="add_liv" layoutX="322.0" layoutY="48.0" mnemonicParsing="false" onAction="#addlivreurAdd" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: white;" text="Add">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="pre_liv_add" layoutX="112.0" layoutY="104.0" />
+            <TextField fx:id="nom_liv_add" layoutX="112.0" layoutY="63.0" />
+            <TextField fx:id="tele_add" layoutX="112.0" layoutY="145.0" />
+            <Label layoutX="52.0" layoutY="63.0" text="Nom :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="104.0" text="Prénom :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="144.0" text="Tétéphone :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="update_liv" layoutX="322.0" layoutY="89.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Update">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="del_liv" layoutX="322.0" layoutY="129.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: white;" text="Delete">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="id_liv_add" layoutX="112.0" layoutY="29.0" />
+            <Label layoutX="71.0" layoutY="29.0" text="ID :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <AnchorPane fx:id="tab_pro" layoutX="196.0" layoutY="39.0" prefHeight="373.0" prefWidth="414.0" visible="false">
+         <children>
+            <TableView layoutX="-6.0" layoutY="173.0" prefHeight="200.0" prefWidth="420.0">
+               <columns>
+                  <TableColumn fx:id="id_pro" prefWidth="73.0" text="id" />
+                  <TableColumn fx:id="nom_pro" prefWidth="124.0" text="Nom" />
+                  <TableColumn fx:id="prix_pro" prefWidth="110.0" text="Prix" />
+                  <TableColumn fx:id="date_exp_pro" prefWidth="112.0" text="Date expiration" />
+               </columns>
+            </TableView>
+            <Button fx:id="add_pro" layoutX="322.0" layoutY="48.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: white;" text="Add">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="nom_pro_add" layoutX="112.0" layoutY="49.0" />
+            <TextField fx:id="prix_add" layoutX="112.0" layoutY="83.0" />
+            <Label layoutX="40.0" layoutY="51.0" text="Nom :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="85.0" text="Prix :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="update_pro" layoutX="322.0" layoutY="89.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Update">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="del_pro" layoutX="322.0" layoutY="129.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: white;" text="Delete">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="date_exp_add" layoutX="112.0" layoutY="117.0" />
+            <Label layoutX="6.0" layoutY="118.0" text="Date exp :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="tab_com" layoutX="196.0" layoutY="39.0" prefHeight="373.0" prefWidth="414.0" visible="false">
+         <children>
+            <TableView fx:id="pt" layoutX="-6.0" layoutY="173.0" prefHeight="200.0" prefWidth="420.0">
+               <columns>
+                  <TableColumn fx:id="id_com" prefWidth="89.0" text="id_com" />
+                  <TableColumn fx:id="date" prefWidth="110.0" text="date" />
+                  <TableColumn fx:id="date_liv" prefWidth="105.0" text="date de livraison" />
+                  <TableColumn prefWidth="115.0" text="prix total" />
+               </columns>
+            </TableView>
+            <Button fx:id="add_com" layoutX="322.0" layoutY="48.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: white;" text="Add">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <TextField fx:id="date_liv_add" layoutX="112.0" layoutY="89.0" />
+            <TextField fx:id="date_add" layoutX="112.0" layoutY="48.0" />
+            <TextField fx:id="pri_tot_add" layoutX="112.0" layoutY="130.0" />
+            <Label layoutX="52.0" layoutY="50.0" text="Date :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="27.0" layoutY="91.0" text="date liv :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="131.0" prefHeight="22.0" prefWidth="71.0" text="Prix tot :" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="update_com" layoutX="322.0" layoutY="89.0" mnemonicParsing="false" style="-fx-background-color: white;" text="Update">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="del_com" layoutX="322.0" layoutY="129.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="65.0" style="-fx-background-color: white;" text="Delete">
+               <font>
+                  <Font name="Franklin Gothic Demi" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Text fill="#f4b41a" layoutX="298.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion ">
+         <font>
+            <Font name="Franklin Gothic Demi" size="18.0" />
+         </font>
+      </Text>
+      <Text fill="#f4b41a" layoutX="363.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Livraison" wrappingWidth="70.751953125">
+         <font>
+            <Font name="Franklin Gothic Demi" size="18.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
